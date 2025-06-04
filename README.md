@@ -27,13 +27,12 @@ This project applies machine learning and LLM to healthcare data to achieve two 
 
 ```
 .
-├── RLDatix-Predictive_Modelling.html       # Predictive Modelling notebook
-├── RLDatix-Named_Entity_Recognition_LLM.ipynb.html # NER notebook
-├── README.md                               # This file
-├── requirements.txt                        # Contains a list of packages or libraries needed   
-└── data/                                   # Directory for raw/processed data files
-    └── <dataset_files>                     # e.g., CSV, JSON files used by the notebooks
-                                            # Contains the project dataset, Assignment_Data.csv 
+├── RLDatix-Patient_Readmission_Prediction.ipynb  # Patient Readmission Prediction notebook
+├── RLDatix-Named_Entity_Recognition_LLM.ipynb    # NER notebook
+├── README.md                                     # This file
+├── requirements.txt                              # Contains a list of packages or libraries needed   
+└── data/                                         # Directory for raw/processed data files
+    └── <Assignment_Data.csv>                     # Contains the project dataset
 ```
 
 ---
