@@ -19,10 +19,7 @@ This project applies machine learning and LLM to healthcare data to achieve two 
   Contains patient data with both structured features and free-text notes used across both applications.
 
 ---
-## Requirements:
-```bash
-pip3 freeze > requirements.txt
-or 
+## Requirements: 
 ```bash
 pip install pandas numpy matplotlib seaborn statsmodels
 pip install -U scikit-learn imbalanced-learn
