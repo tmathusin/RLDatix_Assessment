@@ -1,39 +1,47 @@
-# RLDatix_Assessment
+# RLDatix - Predictive Modelling and Named Entity Recognition
 
-# Foobar
+This project applies machine learning and LLM to healthcare data to achieve two objectives:
 
-Foobar is a Python library for dealing with word pluralization.
+1. **Predicting 30-day patient readmissions** using structured clinical data.
+2. **Extracting clinical entities** from unstructured discharge notes using transformer-based Named Entity Recognition (NER).
 
-## Installation
+---
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## 📂 Project Structure
 
+- `RLDatix-Patient_Readmission_Prediction.ipynb`  
+  Builds and evaluates a machine learning model to predict the likelihood of patient readmission within 30 days.
+
+- `RLDatix-Named_Entity_Recognition_LLM.ipynb`  
+  Uses prompt-based large language models (LLMs) for extracting named entities from discharge summaries.
+
+- `Assignment_Data.csv`  
+  Contains patient data with both structured features and free-text notes used across both applications.
+
+---
+## Requirements:
 ```bash
-pip install foobar
-```
+pip3 freeze > requirements.txt
+or 
+```bash
+pip install pandas numpy matplotlib seaborn statsmodels
+pip install -U scikit-learn imbalanced-learn
+pip install transformers torch
 
-## Usage
+---
+## 🔍 Overview of Each Application
 
-```python
-import foobar
+### 1. Patient Readmission Prediction
+- Preprocessing of structured features (categorical and numerical)
+- Class imbalance handled using SMOTE
+- Feature correlation analysis and selection
+- Model: Random Forest classifier
+- Evaluation on training & test sets for comparison:
+    - classification report (accuracy, recall, precision, F1 score for both classes)
+    - ROC AUC
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+### 2. Named Entity Recognition with LLM
+- Load discharge notes from the dataset
+- Design and format prompts for medical entity extraction
+- Use transformers library to run inference with a pre-trained T5 model
+- Output structured entity lists
