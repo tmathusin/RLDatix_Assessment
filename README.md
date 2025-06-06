@@ -38,19 +38,25 @@ This project applies machine learning and LLM to healthcare data to achieve two 
 ---
 
 ## Requirements
+Create & activate a virtual environment (recommended):  
+
 ```bash
-conda create -n <virtual environment name> python=3.9 # create a virtual environment
-conda activate <virtual environment name> # activate the virtual environment
+conda create -n ner-env python=3.9
+conda activate ner-env 
 ```
-then 
+ 
+
+Then, install dependencies:  
 
 ```bash
 pip install -r requirements.txt
-```
-or
+```  
+
+
+Or install libraries individually:  
 
 ```bash
 pip install pandas numpy matplotlib seaborn statsmodels
 pip install -U scikit-learn imbalanced-learn
-pip install transformers torch
+pip install transformers torch  
 
