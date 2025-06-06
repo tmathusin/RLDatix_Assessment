@@ -38,12 +38,16 @@ This project applies machine learning and LLM to healthcare data to achieve two 
 ---
 
 ## Requirements
+```bash
+conda create -n <virtual environment name> python=3.9 # create a virtual environment
+conda activate <virtual environment name> # activate the virtual environment
+```
+then 
 
 ```bash
 pip install -r requirements.txt
 ```
 or
-
 
 ```bash
 pip install pandas numpy matplotlib seaborn statsmodels
